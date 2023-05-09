@@ -29,7 +29,11 @@ echo -e "\e[1m  ___ ___   ___ ___  ___
 #
 # Credits to u/ashutosharma97 on Reddit for showing how to create new
 # Firefox profiles from the CLI: https://bit.ly/3MayLRu+
-profile_root_directory="$HOME/.mozilla/firefox/$(firefox -CreateProfile ff-pdf && ls -td | head -1)"
+if [ -d "$HOME/.mozilla" ]; then
+   profile_root_directory="$HOME/.mozilla/firefox/$(firefox -CreateProfile ff-pdf && ls -td | head -1)"
+elif [ -d "$GOME/.librewolf" ]; then 
+   profile_root_directory="$HOME/.librewolf/$(librewolf -CreateProfile ff-pdf && ls -td | head -1)"
+fi
 
 
 # The config directory for FF PDF is created and the config files
