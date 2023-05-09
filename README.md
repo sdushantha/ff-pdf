@@ -13,6 +13,7 @@ $ git clone https://github.com/sdushantha/ff-pdf
 $ cd ff-pdf
 $ bash install.sh
 ```
+Notice: Only tested on Linux with i3wm. Can't guarantee this will visualy pleasing on other OS or on systems with a desktop environment. But feel free to send PRs if you have a a solution on supporting other OS and DEs
 ## Usage
 1. Launch it from your application launcher
 2. Open a PDF from your file browser by right clicking and selecting FF PDF
