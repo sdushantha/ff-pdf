@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FF PDF</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #2b2a33;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .dropzone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 200px;
+        border: 2px dashed #3c4043;
+        border-radius: 5px;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+        color: #93969b;
+        cursor: pointer;
+      }
+
+      .file-input {
+        display: none;
+      }
+
+      .file-input-label {
+        display: block;
+        width: 200px;
+        height: 40px;
+        background-color: #444;
+        color: #fff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #file-path {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dropzone" id="dropzone">
+        <input type="file" class="file-input" id="file-input" accept="application/pdf">
+        <label for="file-input" class="file-input-label">Open a PDF</label>
+        <p>Or drag and drop it here</p>
+      </div>
+    </div>
+
+    <script>
+      // Handle file selection event
+      let fileInput = document.getElementById('file-input');
+      fileInput.addEventListener('change', function(event) {
+        let file = event.target.files[0];
+        handleFile(file);
+      });
+      
+      function handleFile(file) {
+        window.location.href = URL.createObjectURL(file);
+      }
+    </script>
+  </body>
+</html>

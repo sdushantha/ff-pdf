@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+# by Siddharth Dushantha
+#
+# CLI program for FF PDF
+# https://github.com/sdushantha/ff-pdf
+#
+
+STARTPAGE="$HOME/.config/ff-pdf/startpage.html"
+PROFILE="FF_PROFILE"
+
+if printf %b "$1" | grep -Eq "(-h|--help)";then
+    echo "Usage: ff-pdf FILE"
+    exit
+fi
+
+# Open STARTPAGE if now file is provided
+file_path="${1:-$STARTPAGE}"
+firefox --profile "$PROFILE" --new-window "$file_path"

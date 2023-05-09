@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=FF PDF
+Comment=Customized Firefox profile modified so that it can be used as dedicated PDF reader
+Exec=FF_PDF_COMMAND
+Icon=ICON_FILE_PATH
+Terminal=false
+Type=Application
+MimeType=application/pdf
+Categories=Utility,Office,Education

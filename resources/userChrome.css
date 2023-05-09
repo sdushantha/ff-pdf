@@ -1,0 +1,19 @@
+/* Hide the tabs */
+#TabsToolbar {
+  visibility: collapse;
+}
+
+/* Hide titlebar (may hide GUI buttons if using a DE) */
+#titlebar {
+  visibility: collapse;
+}
+
+/* Hide the header of the sidebar panel */
+#sidebar-header {
+  visibility: collapse;
+}
+
+/* Hide url bar */
+#navigator-toolbox {
+  visibility: collapse;
+}
