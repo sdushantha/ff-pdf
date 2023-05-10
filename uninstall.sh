@@ -22,4 +22,8 @@ update-desktop-database > /dev/null 2>&1
 
 printf "%b\n" "A new Firefox window has been launched"
 printf "%b\n" "Manually remove the \033[1mff-pdf\033[0m profile"
-firefox --new-window "about:profiles"
+if command -v firefox > /dev/null; then 
+    firefox --new-window "about:profiles"
+elif command -v librewolf > /dev/null; then 
+    librewolf --new-window "about:profiles"
+fi
