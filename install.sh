@@ -31,7 +31,7 @@ echo -e "\e[1m  ___ ___   ___ ___  ___
 # Firefox profiles from the CLI: https://bit.ly/3MayLRu+
 if [ -d "$HOME/.mozilla" ]; then
    profile_root_directory="$HOME/.mozilla/firefox/$(firefox -CreateProfile ff-pdf && ls -td | head -1)"
-elif [ -d "$GOME/.librewolf" ]; then 
+elif [ -d "$HOME/.librewolf" ]; then 
    profile_root_directory="$HOME/.librewolf/$(librewolf -CreateProfile ff-pdf && ls -td | head -1)"
 fi
 
